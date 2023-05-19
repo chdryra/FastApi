@@ -9,7 +9,6 @@ steps:
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
   args: ['run', 'deploy', '${_SERVICE}', '--image', '${_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE}', '--region', '${_LOCATION}']
-serviceAccount: 'projects/$PROJECT_ID/serviceAccounts/default-service-account@fast-api-230516.iam.gserviceaccount.com'
 options:
   logging: CLOUD_LOGGING_ONLY
 substitutions:
