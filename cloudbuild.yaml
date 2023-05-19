@@ -9,6 +9,8 @@ steps:
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
   args: ['run', 'deploy', '${_SERVICE}', '--image', '${_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE}', '--region', '${_LOCATION}']
+options:
+  logging: CLOUD_LOGGING_ONLY
 substitutions:
     _LOCATION: europe-west2
     _REPOSITORY: docker-images
