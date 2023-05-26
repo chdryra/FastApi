@@ -10,6 +10,8 @@ jobs:
       id-token: 'write'
 
     steps:
+    - uses: 'actions/checkout@v3'
+
     - id: 'auth'
       uses: 'google-github-actions/auth@v1'
       with:
@@ -23,3 +25,6 @@ jobs:
 
     - name: 'Use gcloud CLI'
       run: 'gcloud info'
+    
+    - name: 'List files'
+      run: ls -a
