@@ -23,8 +23,5 @@ jobs:
       with:
         version: '>= 363.0.0'
 
-    - name: 'Use gcloud CLI'
-      run: 'gcloud info'
-    
-    - name: 'List files'
-      run: ls -a
+    - name: 'Build and deploy'
+      run: 'gcloud builds submit --region="europe-west1"'
