@@ -1,6 +1,10 @@
 name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions for GCloud
-on: [push]
+on:
+  workflow_dispatch:  
+  push:
+    branches:
+      - main
 jobs:
   job_id:
     # Add "id-token" with the intended permissions.
